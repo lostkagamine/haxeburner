@@ -19,7 +19,7 @@ class T implements IJSAsync {
             } else {
                 res = '${v}';
             }
-            Bitburner.NS.tprint(res);
+            Bitburner.NS.print(res);
         }
 
         var api = new Bitburner();
