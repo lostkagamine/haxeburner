@@ -1,0 +1,9 @@
+--class-path src
+--dce full
+--js bin/x.js
+-L haxeburner
+-L jsasync
+-m haxeburner.M
+--macro jsasync.JSAsync.use("hello")
+--macro haxe.macro.Compiler.include('hello')
+--macro haxe.macro.Compiler.keep('hello.Hello')
