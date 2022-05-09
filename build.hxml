@@ -2,4 +2,6 @@
 --dce full
 --js bin/x.js
 -L compiletime
+-L jsasync
+--macro jsasync.JSAsync.use("haxeburner")
 --macro haxe.macro.Compiler.include('haxeburner')

@@ -1,7 +1,10 @@
 package haxeburner;
 
-abstract class Script {
+@:build(jsasync.JSAsync.build())
+class Script implements IJSAsync {
     public function new() {}
 
-    public abstract function run(ns: Bitburner): Void;
+    public function run(ns: Bitburner): js.lib.Promise<jsasync.Nothing> {
+        return js.lib.Promise.resolve(null);
+    }
 }

@@ -1,17 +1,34 @@
 package haxeburner;
+import haxe.PosInfos;
 import haxeburner.Script;
 
-class T {
+class T implements IJSAsync {
     public function new() {}
 
-    public function _x(ns: Dynamic) {
-        if (ns == null)
+    @:jsasync
+    public function _x(_ns: Dynamic) {
+        if (_ns == null)
             return;
+
+        var ns: Netscript = cast _ns;
+        Bitburner.NS = ns;
+
+        haxe.Log.trace = function(v: Dynamic, ?infos: PosInfos) {
+            var res: String;
+            if (infos != null) {
+                res = '[${infos.fileName}:${infos.lineNumber} ${infos.className}.${infos.methodName}]: ${v}';
+            } else {
+                res = '${v}';
+            }
+            Bitburner.NS.tprint(res);
+        }
+
+        var api = new Bitburner();
 
         var cls = CompileTime.getAllClasses(Script);
         for (index => value in cls) {
             var inst = Type.createInstance(value, []);
-            inst.run(cast ns);
+            inst.run(api).jsawait();
         }
     }
 }

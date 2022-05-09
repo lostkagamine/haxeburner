@@ -9,6 +9,7 @@
     "releasenote": "tba",
     "contributors": ["Rin"],
     "dependencies": {
-        "compiletime": "2.8.0"
+        "compiletime": "2.8.0",
+        "jsasync": "1.2.3"
     }
 }
