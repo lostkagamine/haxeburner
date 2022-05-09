@@ -1,0 +1,14 @@
+{
+    "name": "haxeburner",
+    "url": "https://github.com/ry00001/haxeburner",
+    "license": "MIT",
+    "tags": ["bitburner", "js"],
+    "description": "Write Bitburner scripts in Haxe",
+    "version": "1.0.0",
+    "classPath": "src/",
+    "releasenote": "tba",
+    "contributors": ["Rin"],
+    "dependencies": {
+        "compiletime": "2.8.0"
+    }
+}

@@ -1,0 +1,5 @@
+--class-path src
+--dce full
+--js bin/x.js
+-L compiletime
+--macro haxe.macro.Compiler.include('haxeburner')
