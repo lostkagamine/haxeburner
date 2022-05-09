@@ -4,4 +4,5 @@
 -L compiletime
 -L jsasync
 --macro jsasync.JSAsync.use("haxeburner")
+--macro jsasync.JSAsync.use("haxeburner.lib")
 --macro haxe.macro.Compiler.include('haxeburner')

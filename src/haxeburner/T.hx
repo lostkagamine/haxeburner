@@ -27,7 +27,11 @@ class T implements IJSAsync {
         var cls = CompileTime.getAllClasses(Script);
         for (index => value in cls) {
             var inst = Type.createInstance(value, []);
-            inst.run(api).jsawait();
+            try {
+                inst.run(api).jsawait();
+            } catch(e: Dynamic) {
+                trace('UNCAUGHT EXCEPTION: $e');
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ class System {
 
     public function getComputer(hostname: String) {
         // Verify the computer is actually present
-        var comps = Bitburner.NS.scan();
+        var comps: Array<String> = Bitburner.NS.scan();
         if (!comps.contains(hostname)) {
             throw new ArgumentException('The hostname $hostname was not found.');
         }

@@ -4,7 +4,8 @@ package haxeburner;
 class Script implements IJSAsync {
     public function new() {}
 
-    public function run(ns: Bitburner): js.lib.Promise<jsasync.Nothing> {
-        return js.lib.Promise.resolve(null);
+    @:jsasync
+    public function run(ns: Bitburner): Promise<Nothing> {
+        return;
     }
 }
