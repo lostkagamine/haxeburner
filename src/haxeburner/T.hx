@@ -10,8 +10,7 @@ class T implements IJSAsync {
         if (_ns == null)
             return;
 
-        var ns: Netscript = cast _ns;
-        Bitburner.NS = ns;
+        Bitburner.NS = _ns;
 
         haxe.Log.trace = function(v: Dynamic, ?infos: PosInfos) {
             var res: String;

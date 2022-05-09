@@ -6,7 +6,7 @@ class Bitburner {
     function new() {}
 
     @:allow(haxeburner)
-    private static var NS: Netscript;
+    private static var NS: Dynamic;
 
     public var system(get, null): System;
 
