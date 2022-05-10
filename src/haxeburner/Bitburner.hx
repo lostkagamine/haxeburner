@@ -19,4 +19,6 @@ class Bitburner {
     function get_system() {
         return System.instance;
     }
+
+    public static var instance: Bitburner;
 }

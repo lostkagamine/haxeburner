@@ -23,6 +23,7 @@ class T implements IJSAsync {
         }
 
         var api = new Bitburner();
+        Bitburner.instance = api;
 
         var cls = CompileTime.getAllClasses(Script);
         for (index => value in cls) {

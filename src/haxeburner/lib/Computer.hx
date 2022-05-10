@@ -18,6 +18,10 @@ class Computer implements IJSAsync {
         return jsawait(Bitburner.NS.weaken(hostname));
     }
 
+    public function bruteSSH(): Void {
+        Bitburner.NS.brutessh(hostname);
+    }
+
     public function maxMoney(): Float {
         return Bitburner.NS.getServerMaxMoney(hostname);
     }
